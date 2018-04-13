@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <!-- <% if !current_user.nil?  %>
+      <h1>Bonjour <%= current_user.username %>!</h1>
+    <% end %> -->
+
+
+    <header>
+        <ul>
+            <li><a href="/" style= "color: #fcf3f4;" >Home</a></li>
+            <li><a href="/users" style= "color: #fcf3f4;" >Posts</a></li>
+            <li><a href="/account" style= "color: #fcf3f4;" >Account</a></li>
+            <%= link_to 'Log Out', logout_path, method: :delete %>
+        </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>

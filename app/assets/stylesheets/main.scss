@@ -1,0 +1,39 @@
+body{
+  background-image: url("pink_spots.jpg");
+}
+
+header{
+  background-color:rgba(0, 0, 0, 0.62);
+  margin: -1%;
+}
+
+ul{
+  text-align: right;
+  padding: 0% 3%;
+}
+
+li {
+  list-style: none;
+  justify-content: center;
+  margin: 30px;
+  padding: 14px;
+  display: inline-block;
+  font-size: 41px;
+  color: white;
+  text-shadow: -3px 3px 9px black;
+}
+
+header a{
+  text-decoration: none;
+  color: #fcf3f4;
+  font-size: 30px;
+  text-shadow: -5px 2px 8px black;
+}
+
+.signContainer{
+  margin: 4% 8%;
+}
+
+#signForm{
+  margin: 3% 0%;
+}

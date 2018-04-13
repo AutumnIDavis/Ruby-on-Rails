@@ -1,0 +1,21 @@
+<div class="signContainer">
+    <h1>Login:</h1>
+    <!-- <p>Find me in app/views/sessions/new.html.erb</p> -->
+
+
+    <%= form_for(:session, url: login_path) do |f| %>
+
+        <div id="signForm">
+          <%= f.text_field :username, placeholder: :username %>
+        </div>
+
+        <div id="signForm">
+          <%= f.password_field :password, placeholder: :password %>
+        </div>
+
+        <div id="signForm">
+          <%= f.submit 'Login' %>
+        </div>
+
+    <% end %>
+</div>

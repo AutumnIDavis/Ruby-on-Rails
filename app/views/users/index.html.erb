@@ -1,0 +1,12 @@
+<!-- This is the homepage -->
+<h1><em>Bonjour!</em></h1>
+<!-- <p>Find me in app/views/users/index.html.erb</p> -->
+
+<% @users.each do |user| %>
+    <h2>
+        <%= link_to(user.username, user_path(user) ) %>
+    </h2>
+    <p>
+        <a href="mailto:someone@example.com?Subject=Hello%20again"><%= user.email %></a>
+    </p>
+<% end %>
