@@ -7,15 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user_list = [
-  ["ForeverAutumn", "Autumn", "Davis","sparkles","20"],
-  ["Kashmetology", "Kashmir", "Davis","jinglebell","17"],
-  ["Franco", "Francis", "Langly","marshmello","45"],
-  ["Ro-Go90", "Roman", "Walker","toffee","25"],
-  ["FireAndAsh", "Ashton", "Martin","popcorn","13"]
+  ["ForeverAutumn", "Autumn", "Davis", "foreverautumn16@outlook.com","sparkles"],
+  ["Kashmetology", "Kashmir", "Davis","kashmetology@gmail.com", "jinglebell"],
+  ["FlyingGrayson", "Dick", "Grayson-Wayne", "dgrayson@gotham.com", "popcorn"],
+  ["Franco", "Francis", "Langly", "FranFranco00@gmail.com", "marshmello"],
+  ["TimDW", "Tim", "Drake", "tdrake-wayne@gotham.com", "detective"],
+  ["Ro-Go90", "Roman", "Walker", "romanWalker20@msn.com", "toffee"],
+  ["FireAndAsh", "Ashton", "Martin", "amartin@aol.com", "popcorn"]
 ]
 
 
-user_list.each do |username, fname, lname, password, age|
+user_list.each do |username, fname, lname, email, password|
   User.create(username: username, fname: fname, lname: lname, email: email, password: password)
 end
 

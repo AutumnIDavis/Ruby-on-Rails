@@ -1,21 +1,21 @@
-<div class="signContainer">
-    <h1>Login:</h1>
-    <!-- <p>Find me in app/views/sessions/new.html.erb</p> -->
-
-
+<div class="bodyContainer">
+  <h1>Login</h1>
+  <div class="sign">
     <%= form_for(:session, url: login_path) do |f| %>
 
-        <div id="signForm">
-          <%= f.text_field :username, placeholder: :username %>
+        <div>
+          <p>Username:</p>
+            <%= f.text_field :username, placeholder: :username %>
         </div>
 
-        <div id="signForm">
-          <%= f.password_field :password, placeholder: :password %>
+          <div class="sign">
+            <p>Password: </p>
+            <%= f.password_field :password, placeholder: :password %>
         </div>
 
-        <div id="signForm">
-          <%= f.submit 'Login' %>
+          <div class="sign">
+            <%= f.submit 'Login' %>
         </div>
-
     <% end %>
+  </div>
 </div>

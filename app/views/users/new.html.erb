@@ -1,23 +1,41 @@
-<h1>Sign Up:</h1>
-<!-- <p>Find me in app/views/users/new.html.erb</p> -->
+<div class="bodyContainer">
+  <div class="signUp">
 
-<%= form_for @user do |f| %>
+    <h1>Sign Up:</h1>
+    <!-- <p>Find me in app/views/users/new.html.erb</p> -->
 
-  <div>
-    <%= f.label :username, 'Username' %>
-    <%= f.text_field :username %>
+    <%= form_for @user do |f| %>
+
+      <div class="sign">
+        <%= f.label :username, "Username: " %>
+        <%= f.text_field :username %>
+      </div>
+
+      <div class="sign">
+        <%= f.label :fname, "First Name: " %>
+        <%= f.text_field :fname %>
+      </div>
+
+      <div class="sign">
+        <%= f.label :lname, "Last Name: " %>
+        <%= f.text_field :lname %>
+      </div>
+
+      <div class="sign">
+        <%= f.label :email, "Email: " %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="sign">
+        <%= f.label :password, "Password: " %>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="sign">
+        <%= f.submit "Create Account" %>
+      </div>
+
+    <% end %>
+
   </div>
-
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-
-  <%= f.submit 'Create Account' %>
-
-<% end %>
+</div>

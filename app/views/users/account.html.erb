@@ -1,0 +1,47 @@
+<div class="bodyContainer">
+  <div class="signUp">
+
+    <h1>Edit Account:</h1>
+    <!-- <p>Find me in app/views/users/new.html.erb</p> -->
+
+
+    <form class="" action="/user" method="post">
+
+
+        <div class="accountEd">
+            <p>Username: <%= @user.username %></p>
+            <input name="usernameEd" placeholder="Username" value=""></input>
+        </div>
+
+        <div class="accountEd">
+            <p>First Name: <%= @user.fname %></p>
+            <input name="fnameEd" placeholder="First Name" value=""></input>
+        </div>
+
+        <div class="accountEd">
+            <p>Last Name: <%= @user.lname %></p>
+            <input name="lnameEd" placeholder="Last Name" value=""></input>
+        </div>
+
+        <div class="accountEd">
+            <p>Email: <%= @user.email %></p>
+            <input name="emailEd" placeholder="Email" value=""></input>
+        </div>
+
+          <div class="accountEd">
+            <p>Password: <%= @user.password %></p>
+            <input name="passEd" placeholder="Password" value=""></input>
+        </div>
+
+        <br>
+
+            <input type="submit" name="submit"  value="Save">
+
+
+    </form>
+
+
+
+
+  </div>
+</div>

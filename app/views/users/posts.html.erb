@@ -1,0 +1,23 @@
+<!-- This is the posts page -->
+
+<div class="bodyContainer">
+  <h1><em>Posts!</em></h1>
+  <!-- <p>Find me in app/views/users/index.html.erb</p> -->
+</div>
+
+<div class="sidebar">
+    <h1>Check Out Some Posts, Bella!</h1>
+
+      <div class="users">
+        <% @users.each do |user| %>
+            <h2>
+                <%= link_to(user.username, user_path(user) ) %>
+            </h2>
+            <p>
+                <a href="mailto:someone@example.com?Subject=Hello%20again"><%= user.email %></a>
+            </p>
+        <% end %>
+      </div>
+    </div>
+
+</div>

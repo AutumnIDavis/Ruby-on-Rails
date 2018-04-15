@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   def new
+    
+  end
 
+  def posts
+      @users = User.all
   end
 
   def create

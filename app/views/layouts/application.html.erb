@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsBlog</title>
+    <title>Born Royal</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,7 +20,7 @@
     <header>
         <ul>
             <li><a href="/" style= "color: #fcf3f4;" >Home</a></li>
-            <li><a href="/users" style= "color: #fcf3f4;" >Posts</a></li>
+            <li><a href="/posts" style= "color: #fcf3f4;" >Posts</a></li>
             <li><a href="/account" style= "color: #fcf3f4;" >Account</a></li>
             <%= link_to 'Log Out', logout_path, method: :delete %>
         </ul>

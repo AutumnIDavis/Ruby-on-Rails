@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
 
-
 resources :users do
   resources :posts
 end
@@ -13,7 +12,11 @@ end
   get '/' => 'users#index'
   get '/users' => 'user/#index'
 
+  #leads to posts
+    get '/posts' => 'users#posts'
 
+  #leads to account; where settings can be edited
+  get '/account' => 'users#account'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

@@ -1,8 +1,11 @@
 <!-- <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p> -->
 
-<h1>Ciao, <em> <%= @user.username %> </em>!</h1>
+<div class="bodyContainer">
 
-<p>Click here to delete account:
-    <%= link_to("Delete Account", user_path(@user), method: :delete) %>
-</p>
+  <h1><em>Bienvenue</em> <%= @user.fname %> </em>!</h1>
+
+  <p>Click here to delete account:
+      <%= link_to("Delete Account", user_path(@user), method: :delete) %>
+  </p>
+</div>
