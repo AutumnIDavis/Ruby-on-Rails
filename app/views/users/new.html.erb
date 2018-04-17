@@ -1,6 +1,13 @@
 <div class="bodyContainer">
   <div class="signUp">
 
+    <% if @user.errors.full_messages %>
+      <% @user.errors.full_messages.each do |message| %>
+        <p style = "color:red"><strong> <%= message %> </strong></p>
+      <% end %>
+    <% end %>
+
+
     <h1>Sign Up:</h1>
     <!-- <p>Find me in app/views/users/new.html.erb</p> -->
 
@@ -24,6 +31,11 @@
       <div class="sign">
         <%= f.label :email, "Email: " %>
         <%= f.text_field :email %>
+      </div>
+
+      <div class="sign">
+        <%= f.label :email_confirmation, "Confirm Email: " %>
+        <%= f.text_field :email_confirmation %>
       </div>
 
       <div class="sign">

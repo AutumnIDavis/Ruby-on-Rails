@@ -12,11 +12,20 @@ end
   get '/' => 'users#index'
   get '/users' => 'user/#index'
 
+  #leads to user account page
+  get '/users' => 'users#show'
+
   #leads to posts
-    get '/posts' => 'users#posts'
+  get '/posts' => 'users#posts'
+
 
   #leads to account; where settings can be edited
   get '/account' => 'users#account'
+
+  #creates new post
+  post '/users' => 'users#show' do
+    @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+  end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

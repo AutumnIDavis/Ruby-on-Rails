@@ -53,15 +53,22 @@ li {
   border: solid black 1px;
 }
 
+.body{
+  display: inline-flex;
+}
+
 .sidebar{
   background-color: #fdf9f894;
-  margin: 0% 35%;
+  margin: 0% 0%;
   text-align: center;
-  padding: 2%;
-  right: 9px;
+  padding: 3% 5%;
   position: relative;
-  left: -36%;
+  left: -6%;
   font-size: 12px;
+  display: inline-grid;
+  width: 470px;
+  overflow: auto;
+  height: 600px;
 }
 
 .sidebar a{
@@ -71,11 +78,40 @@ li {
 }
 
 .sidebar h1{
-  padding: 6%;
+  padding: 0%;
 }
 
 .accountEd{
-  margin: 3%;
+  margin: 4%;
+}
+
+.postInput{
+  flex-wrap: wrap;
+  left: 20%;
+  padding: 1% 0%;
+  display: inline;
+}
+
+.userPost{
+  width: 66%;
+  text-align: center;
+  padding: 3% 17%;
+}
+
+#titleForm{
+  margin: 1% 22%;
+  width: 30%;
+  text-align: center;
+}
+
+#titlePost{
+  padding: 8px 156px 104px 18px;
+  margin: 2% 0%;
+}
+
+#editBtn{
+  display: flex;
+  margin: 15px 50%;
 }
 
 #signForm{
