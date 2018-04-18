@@ -13,13 +13,17 @@
   <body>
 
 
+
+
     <header>
         <ul>
             <li><a href="/" style= "color: #fcf3f4;" >Home</a></li>
             <li><a href="/posts" style= "color: #fcf3f4;" >My Posts</a></li>
             <li><a href="/users/:id" style= "color: #fcf3f4;" >Add a Post</a></li>
             <li><a href="/account" style= "color: #fcf3f4;" >Account</a></li>
-            <%= link_to 'Log Out', logout_path, method: :delete %>
+            <% if !current_user.nil? %>
+              <%= link_to 'Log Out', logout_path, method: :delete %>
+            <% end %>
         </ul>
     </header>
     <%= yield %>

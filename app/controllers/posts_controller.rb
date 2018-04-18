@@ -10,6 +10,16 @@ class PostsController < ApplicationController
     end
 end
 
+  def users
+    @users = User.all
+    @posts = @user.posts
+  end
+
+  def show
+    @user = User.find_by(params[:session])
+    @posts = @user.posts
+  end
+
   def index
     @users = User.all
   end
@@ -30,7 +40,7 @@ end
   end
 
   def new
-    @user = User.new
+    @user = User.all
   end
 
   def create
@@ -40,12 +50,6 @@ end
     else
       render 'new'
     end
-  end
-
-  def show
-      @users = User.all
-      @user = current_user
-      @posts = @user.posts
   end
 
 end

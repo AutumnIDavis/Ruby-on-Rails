@@ -5,18 +5,18 @@ class UsersController < ApplicationController
     end
 end
 
-  def index
-    @users = User.all
-    @user = current_user
-    @posts = @user.posts
+def index
+  @users = User.all
+  @user = current_user
+  @posts = @user.posts
 end
 
-  def posts
-    @users = User.all
-    @user = current_user
-    @posts = @user.posts
-    @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-  end
+def posts
+  @users = User.all
+  @user = current_user
+  @posts = @user.posts
+  @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+end
 
   def update
       @users = User.all
