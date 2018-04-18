@@ -2,6 +2,9 @@
 
 Rails.application.routes.draw do
 
+  get 'posts/index'
+  get 'posts/new'
+  get 'posts/show'
 resources :users do
   resources :posts
 end
@@ -18,14 +21,11 @@ end
   #leads to posts
   get '/posts' => 'users#posts'
 
-
   #leads to account; where settings can be edited
   get '/account' => 'users#account'
 
   #creates new post
-  post '/users' => 'users#show' do
-    @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-  end
+  post '/posts' => 'post#new'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

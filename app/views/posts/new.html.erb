@@ -1,0 +1,16 @@
+<!-- <h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p> -->
+<div class="bodyContainer">
+  <div class="signUp">
+
+    <%= form_for @user do |f| %>
+
+            <form class="" action='/users' method="post">
+              <input id="titleForm" placeholder="Title" type="text" name="title" >
+              <textarea name="blog" placeholder="Post" rows="8" cols="80"></textarea>
+              <input id="editBtn" type='submit' name="" value="submit">
+            </form>
+
+      <% end %>
+      </div>
+</div>

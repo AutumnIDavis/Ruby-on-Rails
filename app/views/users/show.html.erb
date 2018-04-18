@@ -5,27 +5,20 @@
 
   <h1><em>Bienvenue</em> <%= @user.fname %> </em>!</h1>
 
-  <div class="userPost">
-    <% @posts.each do |post| %>
-          <h3><%= post.title %></h3>
-        <p>
-            <%= post.content %>
-        </p>
-        <br>
+
+
+  <%= form_for @user do |f| %>
+
+          <form class="" action='/users' method="post">
+            <input id="titleForm" placeholder="Title" type="text" name="title" >
+            <input id="contentForm" textarea name="blog" placeholder="Post" rows="8" cols="80"></textarea>
+            <input id="editBtn" type='submit' name="" value="submit">
+          </form>
+
     <% end %>
-  </div>
 
-
-    <form class="postInput" action='/users' method="post">
-
-        <input id="titleForm" placeholder="Title" type="text" name="title" >
-
-        <textarea id="titlePost" name="blog" placeholder="Post" rows="8" cols="80"></textarea>
-
-        <input id="editBtn" type='submit' name="" value="Save">
-
-    </form>
 </div>
+
 
 
 

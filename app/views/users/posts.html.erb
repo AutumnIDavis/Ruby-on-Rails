@@ -6,7 +6,7 @@
 
 <div class="body">
     <div class="sidebar">
-        <h1>Check Out Some Posts, Bella!</h1>
+        <h1>Check Out Some Other Posts!</h1>
 
           <div class="users">
             <% @users.each do |user| %>
@@ -22,6 +22,19 @@
                     created: <%= time_ago_in_words(user.created_at) %> ago
                 </p>
             <% end %>
+
+            </div>
           </div>
+
+
+          <div class="userPost">
+            <% @posts.each do |post| %>
+                  <h3><%= post.title %></h3>
+                <p>
+                    <%= post.content %>
+                </p>
+                <br>
+            <% end %>
+
         </div>
     </div>

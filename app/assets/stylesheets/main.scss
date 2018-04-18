@@ -58,17 +58,18 @@ li {
 }
 
 .sidebar{
-  background-color: #fdf9f894;
+  background-color: #ededed94;
   margin: 0% 0%;
   text-align: center;
   padding: 3% 5%;
   position: relative;
-  left: -6%;
+  left: 0%;
   font-size: 12px;
   display: inline-grid;
-  width: 470px;
+  width: 300px;
   overflow: auto;
   height: 600px;
+
 }
 
 .sidebar a{
@@ -93,15 +94,29 @@ li {
 }
 
 .userPost{
-  width: 66%;
+  width: 70%;
   text-align: center;
-  padding: 3% 17%;
+  padding: 3% 1%;
+  background-color: #6e656552;
+  overflow: scroll;
+  height: 600px;
+}
+
+.userPost{
+
 }
 
 #titleForm{
   margin: 1% 22%;
   width: 30%;
   text-align: center;
+}
+
+#contentForm{
+  margin: 1% 25%;
+  width: 52%;
+  text-align: center;
+  height: 352px;
 }
 
 #titlePost{

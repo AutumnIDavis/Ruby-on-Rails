@@ -7,11 +7,21 @@ end
 
   def index
     @users = User.all
+    @user = current_user
+    @posts = @user.posts
 end
 
   def posts
+    @users = User.all
+    @user = current_user
+    @posts = @user.posts
+    @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+  end
+
+  def update
       @users = User.all
       @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+      redirect_to '/posts'
   end
 
   def account
@@ -32,9 +42,9 @@ end
   end
 
   def show
+      @users = User.all
       @user = current_user
       @posts = @user.posts
-      @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
   end
 
   def home
@@ -43,11 +53,12 @@ end
 
   def destroy
       User.delete(params[:id])
+      redirect_to users_path
   end
 
   private
 
   def user_params
-      params.require(:user).permit(:username, :email, :email_confirmation, :password)
+      params.require(:user).permit(:username, :email, :password_confirmation, :password)
   end
 end
