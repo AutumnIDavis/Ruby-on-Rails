@@ -5,18 +5,18 @@ class UsersController < ApplicationController
     end
 end
 
-def index
-  @users = User.all
-  @user = current_user
-  @posts = @user.posts
+  def index
+    @users = User.all
+    @user = current_user
+    @posts = Post.all
 end
 
-def posts
-  @users = User.all
-  @user = current_user
-  @posts = @user.posts
-  @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-end
+  def posts
+    @users = User.all
+    @user = current_user
+    @posts = @user.posts
+    @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+  end
 
   def update
       @users = User.all
@@ -25,7 +25,8 @@ end
   end
 
   def account
-    @user = User.find_by(params[:session])
+    @user = User.find(session[:user_id])
+
   end
 
   def new
@@ -35,7 +36,7 @@ end
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_path
+      redirect_to '/'
     else
       render 'new'
     end

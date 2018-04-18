@@ -11,12 +11,13 @@ class PostsController < ApplicationController
 end
 
   def users
-    @users = User.all
+    @user = User.find(params[:id])
     @posts = @user.posts
   end
 
   def show
-    @user = User.find_by(params[:session])
+    @users = User.all
+    @user = User.find(params[:id])
     @posts = @user.posts
   end
 
@@ -25,7 +26,7 @@ end
   end
 
   def posts
-      @users = User.all
+      @user = User.find(params[:id])
       @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
   end
 

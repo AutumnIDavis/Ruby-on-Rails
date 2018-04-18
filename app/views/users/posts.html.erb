@@ -12,7 +12,7 @@
             <% @users.each do |user| %>
             <br><br>
                 <h2>
-                    <%= link_to(user.username, controller: "posts", action: "show", id: @user ) %>
+                    <%= link_to(user.username, controller: "posts", action: "show", id: user.id ) %>
                 </h2>
                 <p>
                     <a href="mailto:someone@example.com?Subject=Hello%20again"><%= user.email %></a>

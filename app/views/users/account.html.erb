@@ -5,40 +5,43 @@
     <!-- <p>Find me in app/views/users/new.html.erb</p> -->
 
 
-    <form class="" action="/user" method="post">
+    <%= form_for @user do |f| %>
 
-
-        <div class="accountEd">
-            <p>Username: <%= @user.username %></p>
-            <input name="usernameEd" placeholder="Username" value=""></input>
+        <div class="sign">
+          <%= f.label :username, "Username: " %>
+          <%= f.text_field :username %>
         </div>
 
-        <div class="accountEd">
-            <p>First Name: <%= @user.fname %></p>
-            <input name="fnameEd" placeholder="First Name" value=""></input>
+        <div class="sign">
+          <%= f.label :fname, "First Name: " %>
+          <%= f.text_field :fname %>
         </div>
 
-        <div class="accountEd">
-            <p>Last Name: <%= @user.lname %></p>
-            <input name="lnameEd" placeholder="Last Name" value=""></input>
+        <div class="sign">
+          <%= f.label :lname, "Last Name: " %>
+          <%= f.text_field :lname %>
         </div>
 
-        <div class="accountEd">
-            <p>Email: <%= @user.email %></p>
-            <input name="emailEd" placeholder="Email" value=""></input>
+        <div class="sign">
+          <%= f.label :email, "Email: " %>
+          <%= f.text_field :email %>
         </div>
 
-          <div class="accountEd">
-            <p>Password: <%= @user.password %></p>
-            <input name="passEd" placeholder="Password" value=""></input>
+        <div class="sign">
+          <%= f.label :password, "Password: " %>
+          <%= f.password_field :password %>
         </div>
 
-        <br>
+        <div class="sign">
+          <%= f.label :password_confirmation, "Confirm Password: " %>
+          <%= f.password_field :password_confirmation %>
+        </div>
 
-            <input type="submit" name="submit" value="Save">
+        <div class="sign">
+          <%= f.submit "Save" %>
+        </div>
 
-
-    </form>
+    <% end %>
 
 
 
