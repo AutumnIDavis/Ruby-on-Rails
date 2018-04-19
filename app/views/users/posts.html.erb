@@ -12,7 +12,7 @@
             <% @users.each do |user| %>
             <br><br>
                 <h2>
-                    <%= link_to(user.username, controller: "posts", action: "show", id: user.id ) %>
+                    <%= link_to(user.username, user_posts_path(user) ) %>
                 </h2>
                 <p>
                     <a href="mailto:someone@example.com?Subject=Hello%20again"><%= user.email %></a>
@@ -27,7 +27,7 @@
           </div>
 
 
-          <div class="userPost">
+          <div class="userPost2">
             <% @posts.each do |post| %>
                   <h3><%= post.title %></h3>
                 <p>

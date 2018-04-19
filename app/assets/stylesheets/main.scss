@@ -102,10 +102,27 @@ li {
   height: 567px;
 }
 
+.userPost2{
+  width: 18%;;
+  text-align: center;
+  padding: 4% 4%;
+  background-color: #716b6c1a;
+  overflow: scroll;
+  height: 567px;
+}
+
+.indiePost{
+  margin: 1%;
+  border: solid black 2px;
+  padding: 2%;
+  background-color: #ffffffcc;
+}
+
 #titleForm{
   margin: 1% 22%;
   width: 30%;
   text-align: center;
+  background-color: #f8f8f8;
 }
 
 #contentForm{
@@ -113,6 +130,11 @@ li {
   width: 52%;
   text-align: center;
   height: 352px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
 #titlePost{

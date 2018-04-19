@@ -1,15 +1,14 @@
-<!-- <h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p> -->
-<div class="bodyContainer">
+<!-- <h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p> -->
 
-  <h1><%= @user.fname %>'s </em> Posts!</h1>
 
-  <div class="userPost">
-    <% @posts.each do |post| %>
-          <h3><%= post.title %></h3>
+      <div class="indiePost">
+          <h3><%= @post.title %></h3>
+      </p>
         <p>
-            <%= post.content %>
+            <%= @post.content %>
         </p>
-        <br>
-    <% end %>
-  </div>
+     </div>
+    <br>
+
+<% render 'comments/form' %>

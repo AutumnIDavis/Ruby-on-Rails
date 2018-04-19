@@ -16,13 +16,14 @@ end
   end
 
   def show
-    @users = User.all
-    @user = User.find(params[:id])
-    @posts = @user.posts
+    @post = Post.find(params[:id])
+    @user = @post.user
   end
 
   def index
-    @users = User.all
+    @user = User.find(params[:user_id])
+    @posts = @user.posts
+
   end
 
   def posts

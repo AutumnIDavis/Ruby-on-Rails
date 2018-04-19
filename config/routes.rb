@@ -2,11 +2,10 @@
 
 Rails.application.routes.draw do
 
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/show'
 resources :users do
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
 
   get '/feed', to: 'posts#feed'
@@ -30,6 +29,7 @@ end
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+
 
   root 'users#index'
 
