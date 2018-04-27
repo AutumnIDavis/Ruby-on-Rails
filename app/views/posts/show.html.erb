@@ -8,7 +8,14 @@
         <p>
             <%= @post.content %>
         </p>
+
      </div>
     <br>
 
-<% render 'comments/form' %>
+    <div id="comment">
+        <h3>Comments</h3>
+    </div>
+
+      <div class="commentContent">
+          <%= render 'comments/comment' %>
+    </div>

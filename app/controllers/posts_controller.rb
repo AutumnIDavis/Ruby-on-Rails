@@ -18,6 +18,7 @@ end
   def show
     @post = Post.find(params[:id])
     @user = @post.user
+    @comments = Comment.where(post_id: @post).order("created_at DESC")
   end
 
   def index

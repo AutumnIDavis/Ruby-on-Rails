@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       puts '**********************'
       # Find a user in the database that matches the username in the form.
       @user = User.find_by(username: params[:session][:username])
+      p @user
       # Check if there is a user with that username, and check if the password is that user's password.
       if @user && @user.password == params[:session][:password]
           puts 'LOGIN SUCCESSFUL'

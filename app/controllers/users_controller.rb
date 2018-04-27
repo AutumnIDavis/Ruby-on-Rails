@@ -36,6 +36,7 @@ end
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in(@user)
       redirect_to '/posts'
     else
       render 'new'
@@ -45,7 +46,7 @@ end
   def show
       @users = User.all
       @user = current_user
-      @posts = @user.posts
+      # @posts = @user.posts
   end
 
   def home
@@ -54,7 +55,7 @@ end
 
   def destroy
       User.delete(params[:id])
-      redirect_to users_path
+      redirect_to '/login'
   end
 
   private
