@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       @comment.save
 
       if @comment.save
-        redirect_to posts_path(@post)
+        redirect_back(fallback_location: root_path)
       else
         render 'new'
       end
